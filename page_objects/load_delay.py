@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
-load_btn = (By.LINK_TEXT, "Load Delay")
+
+load_btn = (By.CSS_SELECTOR, ".btn.btn-primary")
 
 
 class LoadDelay:

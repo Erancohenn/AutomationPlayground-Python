@@ -4,7 +4,7 @@ click_after_btn = (By.CLASS_NAME, "text-warning")
 number_of_clicks = (By.ID, "clickCount")
 
 
-class Click:
+class MouseOver:
     def __init__(self, driver):
         self.driver = driver
 

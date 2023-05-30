@@ -16,10 +16,6 @@ import page_objects.visibility as visible
 class WebFlows:
     @staticmethod
     def dynamic_id_flow():
-        """
-        This test verifies the element text with expected text.
-        """
-
         UiActions.click(page.main_page.get_dynamic_id_page())   # Clicking on Dynamic id page.
         actual_txt = page.dynamic_id_page.get_dynamic_id_btn().text    # Getting element text.
         exp_txt = "Button with Dynamic ID"      # Expected result.
@@ -27,10 +23,6 @@ class WebFlows:
 
     @staticmethod
     def class_atrr_flow():
-        """
-        This test verifies the popup text with expected text.
-        """
-
         UiActions.click(page.main_page.get_class_attribute_page())     # Clicking on Class attribute page.
         UiActions.click(page.class_atrr_page.get_class_atr_blue_btn())     # Clicking the BLUE button.
         alert_obj = conf.driver.switch_to.alert    # Switching to alert popup.
@@ -41,30 +33,18 @@ class WebFlows:
 
     @staticmethod
     def hidden_layers_flow():
-        """
-        This test checks if the blue button is displayed
-        after clicking the green button.
-        """
         UiActions.click(page.main_page.get_hidden_layers_page())    # Clicking on Hidden layers page.
         UiActions.click(page.hidden_layers_page.get_green_btn())    # clicking the green button.
         Verifications.is_displayed(page.hidden_layers_page.get_blue_btn())    # The verification.
 
     @staticmethod
     def load_delay_flow():
-        """
-        This test checks if the button is displayed
-        after load delay.
-        """
         UiActions.click(page.main_page.get_load_delay_page())    # Clicking on Load delay page.
         UiActions.click(page.load_delay_page.get_load_btn())    # Clicking after delay button.
         Verifications.is_displayed(page.load_delay_page.get_load_btn())    # The verification.
 
     @staticmethod
     def ajax_data_flow():
-        """
-        This test checks if the element is displayed
-        after pressing the Ajax Request button.
-        """
         UiActions.click(page.main_page.get_ajax_data_page())    # Clicking on AJAX Data page.
         UiActions.click(page.ajax_data_page.get_ajax_btn())    # Clicking on ajax button.
         wait(For.ELEMENT_DISPLAYED, ajax.after_ajax_txt)    # Waiting for element to be displayed.
@@ -72,11 +52,6 @@ class WebFlows:
 
     @staticmethod
     def client_side_delay_flow():
-        """
-        This test verifies text of an element
-        created by client side button.
-        """
-
         UiActions.click(page.main_page.get_client_side_delay_page())    # Clicking on Client Side Delay page.
         UiActions.click(page.client_side_delay_page.get_trigger_btn())    # Clicking on trigger button.
         conf.driver.implicitly_wait(20)
@@ -86,21 +61,12 @@ class WebFlows:
 
     @staticmethod
     def click_flow():
-        """
-        This test checks if element is clickable.
-        """
-
         UiActions.click(page.main_page.get_click_page())    # Clicking on Click page.
         UiActions.move_to_elem_click(page.click_page.get_click_btn())    # Moving to 'Click' button.
         Verifications.is_clickable(click.click_btn)    # The verification.
 
     @staticmethod
     def text_input_flow():
-        """
-        This test verifies the user input with
-        element text.
-        """
-
         UiActions.click(page.main_page.get_text_input_page())    # Clicking on Click page.
         text_field = page.test_input_page.get_txt_field()    # Inserting element to variable.
         update_btn = page.test_input_page.get_update_btn()    # Inserting element to variable.
@@ -112,10 +78,6 @@ class WebFlows:
 
     @staticmethod
     def scrollbars_flow():
-        """
-        This test verifies visibility of element
-        """
-
         UiActions.click(page.main_page.get_scrollbars_page())    # Clicking on Scrollbars page.
         hidden = page.scrollbars_page.get_hidden_btn()    # Inserting element to variable.
         UiActions.scroll_to_elem(hidden)    # Scrolling to elem.
@@ -123,10 +85,6 @@ class WebFlows:
 
     @staticmethod
     def dynamic_table_flow():
-        """
-        This test verifies equals between elements.
-        """
-
         UiActions.click(page.main_page.get_dynamic_table_page())    # Clicking on Dynamic Table page.
         columns = page.dynamic_table_page.get_table_columns()    # Inserting elements to list.
         rows = page.dynamic_table_page.get_table_rows()    # Inserting elements to list.
@@ -155,10 +113,6 @@ class WebFlows:
 
     @staticmethod
     def verify_text_flow():
-        """
-        This test verifies element with expected text.
-        """
-
         UiActions.click(page.main_page.get_verify_txt_page())    # Clicking on Verify Text page.
         normal_txt = page.verify_text_page.get_normal_txt().text    # Inserting element text to variable.
         exp_txt = 'Welcome UserName!'    # Expected text
@@ -166,11 +120,6 @@ class WebFlows:
 
     @staticmethod
     def progress_bar_flow():
-        """
-        This test verifies element attribute
-        with expected text.
-        """
-
         UiActions.click(page.main_page.get_progress_bar_page())    # Clicking on Progress Bar page.
         start = page.progress_bar_page.get_start_btn()    # Inserting element to variable.
         stop = page.progress_bar_page.get_stop_btn()    # Inserting element to variable.
@@ -183,10 +132,6 @@ class WebFlows:
 
     @staticmethod
     def visibility_flow():
-        """
-        This test Verifies visibility of elements.
-        """
-
         UiActions.click(page.main_page.get_visibility_page())    # Clicking on Visibility page.
 
         # buttons
@@ -205,11 +150,6 @@ class WebFlows:
 
     @staticmethod
     def sample_app_flow():
-        """
-        This test verifies element text with
-        expected text.
-        """
-
         UiActions.click(page.main_page.get_sample_app_page())    # Clicking on Visibility page.
         password = "pwd"    # Expected password.
         user = "user"    # Expected username.
@@ -233,11 +173,6 @@ class WebFlows:
 
     @staticmethod
     def mouse_over_flow():
-        """
-        This test verifies the user input with
-        element text.
-        """
-
         UiActions.click(page.main_page.get_mouse_over_page())    # Clicking on Mouse Over page.
         exp_num_of_clicks = "2"    # Expected number of clicks.
         click_first_btn = page.mouse_over_page.get_click_first_btn()    # Inserting element to variable.
@@ -251,21 +186,12 @@ class WebFlows:
 
     @staticmethod
     def non_breaking_space_flow():
-        """
-        This test checks if element is displayed.
-        """
-
         UiActions.click(page.main_page.get_non_breaking_space_page())    # Clicking on Non-Breaking Space page.
         my_button = page.non_breaking_page.get_my_btn()    # Inserting element to variable.
         Verifications.is_displayed(my_button)    # The verification
 
     @staticmethod
     def overlapped_flow():
-        """
-        This test verifies elements attributes with
-        given text.
-        """
-
         UiActions.click(page.main_page.get_overlapped_page())    # Clicking on Overlapped page.
         id_txt = 'fakeid'    # Expected id text.
         name_txt = 'Liverpool'    # Expected name text.

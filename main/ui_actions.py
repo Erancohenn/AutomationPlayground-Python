@@ -65,13 +65,3 @@ class UiActions:
         :type: WebElement
         """
         conf.action.double_click(elem).perform()
-
-    """
-    Extract word with a given index from the file.
-    :param file_path: path to the file
-    :param index: specific word chosen by index
-    :type file_path: str
-    :type index: int
-    :return: Word from the file chosen by index
-    :rtype: str
-    """

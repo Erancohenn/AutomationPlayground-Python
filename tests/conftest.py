@@ -10,7 +10,7 @@ driver = None
 action = None
 
 
-@pytest.fixture(scope='class')
+@pytest.fixture(scope='function')
 def setup_and_teardown(request):
     globals()['driver'] = get_chrome()  # opens chrome
     driver.get(f"http://localhost:3000/")  # go to url
